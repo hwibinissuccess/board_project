@@ -73,9 +73,13 @@ Part2.ch02.08
  - 게시판 페이지 만들기
   -> Semantic tag 사용 -> header, body, footer ...
 
-Part2.ch02.09
+Part2.ch02.09,10
  - github 리베이스 앤 머지 전략
  - start.spring.io에서 타임리프와 시큐리티를 같이 담아서 디펜더시를 가져온다.
  - 로그인 페이지가 만들어져있음. 따로 만들지 않아도.
  - Security Configuration이 2.7버전되면서, 원래는 extends로 WebSecurityConfigurerAdapter를 햇었는데,
    컴포넌트 빈으로 하게 바뀜. 장려
+
+Part2.ch02.11
+ - bootstrap에서 좀 더 이쁜 페이지를 위한 페이지 -> bootdey.com 추천
+
