@@ -69,3 +69,13 @@ Part2.ch02.07
   -> 테스트가 통과안되면 build가 실패하기 때문에 제외시킬 때 사용
   -> 기존 테스트를 실패한 채 올리면 `gradle build`가 실패하여 배포 자동화에 악영향이 있어, 실패 테스트는 테스트 제외 처리하는 방향 적용하기 위해, 기능 구현 중인 유닛 테스트를 모두 `@Disabled`처리
 
+Part2.ch02.08
+ - 게시판 페이지 만들기
+  -> Semantic tag 사용 -> header, body, footer ...
+
+Part2.ch02.09
+ - github 리베이스 앤 머지 전략
+ - start.spring.io에서 타임리프와 시큐리티를 같이 담아서 디펜더시를 가져온다.
+ - 로그인 페이지가 만들어져있음. 따로 만들지 않아도.
+ - Security Configuration이 2.7버전되면서, 원래는 extends로 WebSecurityConfigurerAdapter를 햇었는데,
+   컴포넌트 빈으로 하게 바뀜. 장려
