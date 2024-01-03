@@ -2,9 +2,10 @@ package com.hwibin.boardproject.service;
 
 import com.hwibin.boardproject.domain.Article;
 import com.hwibin.boardproject.dto.ArticleDto;
-import com.hwibin.boardproject.dto.ArticleUpdateDto;
+import com.hwibin.boardproject.dto.ArticleWithCommentsDto;
 import com.hwibin.boardproject.repository.ArticleRepository;
 import com.hwibin.boardproject.type.SearchType;
+import jakarta.persistence.EntityNotFoundException;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -12,10 +13,18 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.Pageable;
 
 import java.time.LocalDateTime;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Optional;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.AssertionsForClassTypes.catchThrowable;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.BDDMockito.*;
 
