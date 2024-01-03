@@ -1,13 +1,17 @@
 package com.hwibin.boardproject.service;
 
 import com.hwibin.boardproject.dto.ArticleDto;
-import com.hwibin.boardproject.dto.ArticleUpdateDto;
+import com.hwibin.boardproject.dto.ArticleWithCommentsDto;
 import com.hwibin.boardproject.repository.ArticleRepository;
 import com.hwibin.boardproject.type.SearchType;
+import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.Arrays;
 
 @Slf4j
 @RequiredArgsConstructor

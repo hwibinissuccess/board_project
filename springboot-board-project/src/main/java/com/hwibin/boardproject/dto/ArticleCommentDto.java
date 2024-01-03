@@ -1,5 +1,9 @@
 package com.hwibin.boardproject.dto;
 
+import com.hwibin.boardproject.domain.Article;
+import com.hwibin.boardproject.domain.ArticleComment;
+import com.hwibin.boardproject.domain.UserAccount;
+
 import java.time.LocalDateTime;
 
 public record ArticleCommentDto(

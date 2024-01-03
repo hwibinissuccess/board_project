@@ -1,6 +1,10 @@
 package com.hwibin.boardproject.dto;
 
+import com.hwibin.boardproject.domain.Article;
+import com.hwibin.boardproject.domain.UserAccount;
+
 import java.time.LocalDateTime;
+import java.util.stream.Collectors;
 
 
 public record ArticleDto(
