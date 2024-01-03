@@ -10,29 +10,23 @@ import org.springframework.data.querydsl.binding.QuerydslBinderCustomizer;
 import org.springframework.data.querydsl.binding.QuerydslBindings;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
-@RepositoryRestResource(excerptProjection = ArticleProjection.class)
+@RepositoryRestResource
 public interface ArticleRepository extends
         JpaRepository<Article, Long>,
-        ArticleRepositoryCustom,
         QuerydslPredicateExecutor<Article>,
         QuerydslBinderCustomizer<QArticle> {
 
-    Page<Article> findByTitleContaining(String title, Pageable pageable);
-    Page<Article> findByContentContaining(String content, Pageable pageable);
-    Page<Article> findByUserAccount_UserIdContaining(String userId, Pageable pageable);
-    Page<Article> findByUserAccount_NicknameContaining(String nickname, Pageable pageable);
-
-    void deleteByIdAndUserAccount_UserId(Long articleId, String userid);
-
     @Override
-    default void customize(QuerydslBindings bindings, QArticle root) {
+    default void customize(QuerydslBindings bindings, QArticle root){
+        // 선택적으로 검색하게 하기
+        // excludeUnlistedProperties -> 리스팅을 하지 않은 프로퍼티는 검색에서 제외
         bindings.excludeUnlistedProperties(true);
-        bindings.including(root.title, root.content, root.hashtags, root.createdAt, root.createdBy);
-        bindings.bind(root.title).first(StringExpression::containsIgnoreCase);
-        bindings.bind(root.content).first(StringExpression::containsIgnoreCase);
-        bindings.bind(root.hashtags.any().hashtagName).first(StringExpression::containsIgnoreCase);
-        bindings.bind(root.createdAt).first(DateTimeExpression::eq);
-        bindings.bind(root.createdBy).first(StringExpression::containsIgnoreCase);
-    }
+        bindings.including(root.title, root.hashtag, root.createdAt, root.createdBy, root.content);
+        bindings.bind(root.content).first(StringExpression::containsIgnoreCase); // like '%${v}%'
+        bindings.bind(root.hashtag).first(StringExpression::containsIgnoreCase); // like '%${v}%'
+        bindings.bind(root.createdAt).first(DateTimeExpression::eq); // like '%${v}%'
+        bindings.bind(root.createdBy).first(StringExpression::containsIgnoreCase); // like '%${v}%'
+        bindings.bind(root.title).first(StringExpression::containsIgnoreCase); // like '%${v}%'
 
+    }
 }
