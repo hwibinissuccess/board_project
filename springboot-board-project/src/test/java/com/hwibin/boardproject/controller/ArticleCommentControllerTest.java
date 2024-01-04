@@ -1,7 +1,7 @@
 package com.hwibin.boardproject.controller;
 
+import com.hwibin.boardproject.ArticleCommentDto;
 import com.hwibin.boardproject.config.TestSecurityConfig;
-import com.hwibin.boardproject.dto.ArticleCommentDto;
 import com.hwibin.boardproject.dto.request.ArticleCommentRequest;
 import com.hwibin.boardproject.service.ArticleCommentService;
 import com.hwibin.boardproject.util.FormDataEncoder;
