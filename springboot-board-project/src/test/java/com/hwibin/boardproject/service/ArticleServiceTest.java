@@ -1,6 +1,7 @@
 package com.hwibin.boardproject.service;
 
 import com.hwibin.boardproject.domain.Article;
+import com.hwibin.boardproject.domain.constant.SearchType;
 import com.hwibin.boardproject.dto.ArticleDto;
 import com.hwibin.boardproject.dto.ArticleWithCommentsDto;
 import com.hwibin.boardproject.repository.ArticleRepository;

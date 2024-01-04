@@ -1,5 +1,6 @@
 package com.hwibin.boardproject.service;
 
+import com.hwibin.boardproject.domain.constant.SearchType;
 import com.hwibin.boardproject.dto.ArticleDto;
 import com.hwibin.boardproject.dto.ArticleWithCommentsDto;
 import com.hwibin.boardproject.repository.ArticleRepository;
@@ -11,6 +12,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Arrays;
+import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 @Slf4j
 @RequiredArgsConstructor

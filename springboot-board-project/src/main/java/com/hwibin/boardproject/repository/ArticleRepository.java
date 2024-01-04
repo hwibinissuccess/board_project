@@ -2,6 +2,7 @@ package com.hwibin.boardproject.repository;
 
 import com.hwibin.boardproject.domain.Article;
 import com.hwibin.boardproject.domain.QArticle;
+import com.hwibin.boardproject.repository.querydsl.ArticleRepositoryCustom;
 import com.querydsl.core.types.dsl.DateTimeExpression;
 import com.querydsl.core.types.dsl.StringExpression;
 import org.springframework.data.domain.Page;
