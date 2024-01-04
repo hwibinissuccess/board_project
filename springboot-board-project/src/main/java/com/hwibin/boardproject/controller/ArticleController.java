@@ -8,7 +8,6 @@ import com.hwibin.boardproject.dto.response.ArticleWithCommentsResponse;
 import com.hwibin.boardproject.dto.security.BoardPrincipal;
 import com.hwibin.boardproject.service.ArticleService;
 import com.hwibin.boardproject.service.PaginationService;
-import com.hwibin.boardproject.type.SearchType;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

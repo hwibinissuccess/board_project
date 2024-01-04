@@ -1,7 +1,7 @@
 package com.hwibin.boardproject.controller;
 
 import com.hwibin.boardproject.service.ArticleService;
-import com.hwibin.boardproject.type.SearchType;
+import com.hwibin.boardproject.service.PaginationService;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

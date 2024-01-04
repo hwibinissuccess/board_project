@@ -4,7 +4,6 @@ import com.hwibin.boardproject.domain.Article;
 import com.hwibin.boardproject.dto.ArticleDto;
 import com.hwibin.boardproject.dto.ArticleWithCommentsDto;
 import com.hwibin.boardproject.repository.ArticleRepository;
-import com.hwibin.boardproject.type.SearchType;
 import jakarta.persistence.EntityNotFoundException;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
