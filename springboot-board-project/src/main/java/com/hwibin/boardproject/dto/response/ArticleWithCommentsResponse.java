@@ -2,6 +2,7 @@ package com.hwibin.boardproject.dto.response;
 
 import com.hwibin.boardproject.dto.ArticleCommentDto;
 import com.hwibin.boardproject.dto.ArticleWithCommentsDto;
+import com.hwibin.boardproject.dto.HashtagDto;
 
 import java.time.LocalDateTime;
 import java.util.Comparator;

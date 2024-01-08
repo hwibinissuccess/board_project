@@ -2,6 +2,7 @@ package com.hwibin.boardproject.repository;
 
 import com.hwibin.boardproject.domain.Article;
 import com.hwibin.boardproject.domain.ArticleComment;
+import com.hwibin.boardproject.domain.Hashtag;
 import com.hwibin.boardproject.domain.UserAccount;
 import org.assertj.core.api.InstanceOfAssertFactories;
 import org.junit.jupiter.api.DisplayName;
@@ -11,7 +12,7 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;
-import org.springframework.data.domain.AuditorAware;
+import org.springframework.data.domain.*;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 import java.util.List;

@@ -1,10 +1,16 @@
 package com.hwibin.boardproject.service;
 
 import com.hwibin.boardproject.domain.Article;
+import com.hwibin.boardproject.domain.Hashtag;
+import com.hwibin.boardproject.domain.UserAccount;
 import com.hwibin.boardproject.domain.constant.SearchType;
 import com.hwibin.boardproject.dto.ArticleDto;
 import com.hwibin.boardproject.dto.ArticleWithCommentsDto;
+import com.hwibin.boardproject.dto.HashtagDto;
+import com.hwibin.boardproject.dto.UserAccountDto;
 import com.hwibin.boardproject.repository.ArticleRepository;
+import com.hwibin.boardproject.repository.HashtagRepository;
+import com.hwibin.boardproject.repository.UserAccountRepository;
 import jakarta.persistence.EntityNotFoundException;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -15,6 +21,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
+import org.springframework.test.util.ReflectionTestUtils;
 
 import java.time.LocalDateTime;
 import java.util.HashSet;

@@ -1,11 +1,17 @@
 package com.hwibin.boardproject.service;
 
+import com.hwibin.boardproject.domain.Article;
+import com.hwibin.boardproject.domain.Hashtag;
+import com.hwibin.boardproject.domain.UserAccount;
 import com.hwibin.boardproject.domain.constant.SearchType;
 import com.hwibin.boardproject.dto.ArticleDto;
 import com.hwibin.boardproject.dto.ArticleWithCommentsDto;
 import com.hwibin.boardproject.repository.ArticleRepository;
+import com.hwibin.boardproject.repository.HashtagRepository;
+import com.hwibin.boardproject.repository.UserAccountRepository;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;

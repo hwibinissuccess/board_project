@@ -1,19 +1,31 @@
 package com.hwibin.boardproject.service;
 
 import com.hwibin.boardproject.ArticleCommentDto;
+import com.hwibin.boardproject.domain.Article;
+import com.hwibin.boardproject.domain.ArticleComment;
+import com.hwibin.boardproject.domain.Hashtag;
+import com.hwibin.boardproject.domain.UserAccount;
+import com.hwibin.boardproject.dto.UserAccountDto;
 import com.hwibin.boardproject.repository.ArticleCommentRepository;
 import com.hwibin.boardproject.repository.ArticleRepository;
+import com.hwibin.boardproject.repository.UserAccountRepository;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.test.util.ReflectionTestUtils;
 
+import javax.persistence.EntityNotFoundException;
+import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Set;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.mockito.BDDMockito.given;
+import static org.assertj.core.api.AssertionsForClassTypes.tuple;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.BDDMockito.*;
 
 @DisplayName("비즈니스 로직 - 댓글")
 @ExtendWith(MockitoExtension.class)

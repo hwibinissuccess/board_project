@@ -1,6 +1,7 @@
 package com.hwibin.boardproject.dto.response;
 
 import com.hwibin.boardproject.dto.ArticleDto;
+import com.hwibin.boardproject.dto.HashtagDto;
 
 import java.time.LocalDateTime;
 import java.util.Set;
