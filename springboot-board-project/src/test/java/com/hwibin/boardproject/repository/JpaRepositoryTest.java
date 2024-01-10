@@ -109,6 +109,7 @@ class JpaRepositoryTest {
         assertThat(articleCommentRepository.count()).isEqualTo(previousArticleCommentCount - deletedCommentsSize);
     }
 
+
     @DisplayName("대댓글 조회 테스트")
     @Test
     void givenParentCommentId_whenSelecting_thenReturnsChildComments() {

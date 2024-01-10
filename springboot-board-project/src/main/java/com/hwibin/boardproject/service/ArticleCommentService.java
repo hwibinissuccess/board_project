@@ -2,8 +2,12 @@ package com.hwibin.boardproject.service;
 
 import com.hwibin.boardproject.ArticleCommentDto;
 import com.hwibin.boardproject.domain.Article;
+import com.hwibin.boardproject.domain.ArticleComment;
+import com.hwibin.boardproject.domain.UserAccount;
 import com.hwibin.boardproject.repository.ArticleCommentRepository;
 import com.hwibin.boardproject.repository.ArticleRepository;
+import com.hwibin.boardproject.repository.UserAccountRepository;
+import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -27,6 +31,7 @@ public class ArticleCommentService {
                 .stream()
                 .map(ArticleCommentDto::from)
                 .toList();
+
     }
 
     public void saveArticleComment(ArticleCommentDto dto) {

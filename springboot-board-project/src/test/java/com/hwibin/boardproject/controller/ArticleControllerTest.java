@@ -6,6 +6,7 @@ import com.hwibin.boardproject.domain.constant.SearchType;
 import com.hwibin.boardproject.dto.ArticleDto;
 import com.hwibin.boardproject.dto.ArticleWithCommentsDto;
 import com.hwibin.boardproject.dto.HashtagDto;
+import com.hwibin.boardproject.dto.UserAccountDto;
 import com.hwibin.boardproject.dto.request.ArticleRequest;
 import com.hwibin.boardproject.dto.response.ArticleResponse;
 import com.hwibin.boardproject.service.ArticleService;
@@ -51,7 +52,6 @@ class ArticleControllerTest {
     @MockBean private ArticleService articleService;
     @MockBean private PaginationService paginationService;
 
-
     ArticleControllerTest(
             @Autowired MockMvc mvc,
             @Autowired FormDataEncoder formDataEncoder
@@ -59,7 +59,6 @@ class ArticleControllerTest {
         this.mvc = mvc;
         this.formDataEncoder = formDataEncoder;
     }
-
 
     @DisplayName("[view][GET] 게시글 리스트 (게시판) 페이지 - 정상 호출")
     @Test
