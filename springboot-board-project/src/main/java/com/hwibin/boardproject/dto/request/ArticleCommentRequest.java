@@ -17,7 +17,7 @@ public record ArticleCommentRequest(
         return new ArticleCommentRequest(articleId, parentCommentId, content);
     }
 
-    public com.hwibin.boardproject.ArticleCommentDto toDto(UserAccountDto userAccountDto) {
+    public ArticleCommentDto toDto(UserAccountDto userAccountDto) {
         return ArticleCommentDto.of(
                 articleId,
                 userAccountDto,
